@@ -4,21 +4,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-
 import lombok.Data;
 
-@Data
 @Entity
-public class FoodMenu {
-	
+@Data
+public class Transaction {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    
-	private String items;
-    private Double price;
-   
-    @ManyToOne
-    private FoodCategory foodCategory;
+	private Long id;
+	
+	private Long foodMenuId;
+	private Double transactionAmount;
+	private Double refunded;
 }
