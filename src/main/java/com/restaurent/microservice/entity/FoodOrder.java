@@ -21,6 +21,8 @@ public class FoodOrder {
     @GeneratedValue(generator = "foodorder_seq", strategy = GenerationType.AUTO)
 	private Long id;
 	
+    
+    
     private Double total;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
