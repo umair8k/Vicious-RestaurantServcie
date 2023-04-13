@@ -7,6 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Transient;
+import com.restaurent.microservice.dto.RoomDetailsDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +21,7 @@ import lombok.NoArgsConstructor;
 public class FoodOrder {
 	
     @Id
-    @GeneratedValue(generator = "foodorder_seq", strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
     
@@ -28,9 +31,8 @@ public class FoodOrder {
 	@ManyToMany(fetch = FetchType.EAGER)
 	private List<FoodMenu> foodMenu;
 	
-	//@OneToOne
-	//private RoomDetails roomDetails;
+	@Transient
+	@OneToOne
+	private RoomDetailsDto roomDetailsdto;
 
-
-	
 }

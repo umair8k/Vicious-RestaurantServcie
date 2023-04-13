@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.restaurent.microservice.entity.FoodCategory;
-import com.restaurent.microservice.repository.FoodCategoryRepository;
+//import com.restaurent.microservice.repository.FoodCategoryRepository;
 import com.restaurent.microservice.service.FoodCategoryService;
 @RestController
 public class FoodCategoryController {
 
-	@Autowired
-	private FoodCategoryRepository foodCategoryRepository;
+//	@Autowired
+//	private FoodCategoryRepository foodCategoryRepository;
 	
 	@Autowired
 	private FoodCategoryService foodCategoryService;
